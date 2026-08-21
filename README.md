@@ -42,13 +42,13 @@ Adhered to Least privilege and RBAC practices to ensure a privilege creep is pre
 Automation
 ----------
 The provisioning script I created functions based off of the logic below:
-# HR sends a .csv file containing Firstname, Lastname, Username,Job desc, etc... 
-# I import the .csv script using Import-CSV "C:\path\path" after also importing AD library
-# Created $OU variables with their paths to help script decide where users should be created
-# Created $DepartmentGroup variables to help decide what groups users should be placed in within their department
-# Used New-ADUser with the previously defined $OU variables as well as .csv data to create users 
-# Used the previously defined $DepartmentGroup variables and "Add-ADGroupMember" to assign users to their designated departmental security groups
-# Added additional logic for users that require VPN or Payroll access
+- HR sends a .csv file containing Firstname, Lastname, Username,Job desc, etc... 
+- I import the .csv script using Import-CSV "C:\path\path" after also importing AD library
+- Created $OU variables with their paths to help script decide where users should be created
+- Created $DepartmentGroup variables to help decide what groups users should be placed in within their department
+- Used New-ADUser with the previously defined $OU variables as well as .csv data to create users 
+- Used the previously defined $DepartmentGroup variables and "Add-ADGroupMember" to assign users to their designated departmental security groups
+- Added additional logic for users that require VPN or Payroll access
 
 Joiner/Mover/Leaver (JML)
 -------------------------
