@@ -52,3 +52,10 @@ the password associated with the on-premises Active Directory account.
 - Cloud authentication
 - On-premises identity as the source
 - Separation between identity synchronization and authorization
+
+  ## Evidence
+
+The following screenshot demonstrates successful Microsoft 365
+authentication using the synchronized `jlee` account.
+
+![Successful Microsoft 365 login](04_screenshots\jlee-m365.png)
