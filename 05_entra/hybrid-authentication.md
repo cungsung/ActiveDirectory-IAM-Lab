@@ -58,4 +58,4 @@ the password associated with the on-premises Active Directory account.
 The following screenshot demonstrates successful Microsoft 365
 authentication using the synchronized `jlee` account.
 
-![Successful Microsoft 365 login](04_screenshots\jlee-m365.png)
+![Successful Microsoft 365 login](04_screenshots/jlee-m365.png)
