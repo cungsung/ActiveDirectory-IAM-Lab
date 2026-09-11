@@ -1,10 +1,5 @@
 # Hybrid Authentication
 
-## Purpose
-
-This document explains how authentication works between the on-premises
-Active Directory environment and Microsoft Entra ID in the Aerotyne lab.
-
 ## Authentication Flow
 
 The lab uses Password Hash Synchronization (PHS).
