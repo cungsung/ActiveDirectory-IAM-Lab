@@ -1,4 +1,4 @@
-# Active Directory & IAM Lab
+# Active Directory & IAM Lab V1
 
 A hands-on Identity and Access Management lab designed to simulate identity lifecycle and access-control processes in an enterprise environment.
 
