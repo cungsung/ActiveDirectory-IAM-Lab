@@ -37,14 +37,14 @@ Aerotyne
 
 Users in this domain are organized by department, not role. Imagine if I chose role-based organization
 and not department-based organization...I might have 100+ OUs in the domain and things would be all tangled. Therefore,
-Department-based organization was the best fit for my lab's requirements. The reason is the same as to why 
+department-based organization was the best fit for my lab's requirements. The reason is the same as to why 
 I deliberately avoided a generic "Users" OU. If I had a Department OU like "Finance" and
 also had a "Users" OU. What would then be the purpose of my departmental setup? These are the 
 questions I've been asking during this iteration of the lab. 
 As far as the Admin Accounts OU stands, I created it to keep administrative entites separate from their day-to-day
 browsing and job duties. The OU contains accounts used for higher-level administrative responsibilities like network
 administration, system administration, and cryptography management and administration.
-The disabled users OU is there to placedeprovisioned users for the purpose of retaining all disabled objects in Aerotyne.
+The disabled users OU is there to place deprovisioned users for the purpose of retaining all disabled objects in Aerotyne.
 
 
 ## Future Hybrid Identity
