@@ -6,15 +6,12 @@ The architecture is intentionally designed as a laboratory environment. Aerotyne
 
 ## Domain
 
-**Domain:** `aerotyne.local`
+**Domain:** `corp.aerotyne.com`
 
 ### Rationale
 
 The domain name was intentionally chosen to distinguish the V2 laboratory from a production enterprise environment.
 
-An earlier design considered using `corp.aerotyne.com`. While that namespace is closer to a pattern that could exist in a production organization, it also makes the laboratory environment appear more like an actual corporate deployment.
-
-Using `aerotyne.local` makes the laboratory nature of the environment explicit.
 
 The domain namespace is also treated as an architectural decision rather than simply a value entered during Active Directory installation. Future hybrid identity work will require evaluating how the on-premises namespace relates to user identities and Microsoft Entra ID.
 
