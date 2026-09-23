@@ -225,20 +225,6 @@ automatic expiration;
 audit logging of activation and removal;
 verification that elevated access is no longer present after expiration.
 
-### Implementation Note:
-
-The exact technical JIT mechanism will be designed during the Privileged Access phase of the lab rather than 
-implemented directly as part of the initial Sales RBAC model.
-### Design consideration:
-
-Direct membership in Domain Local entitlement groups creates an exception to the normal:
-
-User → Global Role Group → Domain Local Entitlement Group
-
-authorization model.
-
-If this exception is permitted, it must be explicitly governed, documented, time-limited, and auditable
-
 ## How frequently should supervisory access be reviewed?
 ### Decision:
 Supervisory access should be reviewed quarterly.
