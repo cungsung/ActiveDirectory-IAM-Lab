@@ -202,14 +202,33 @@ be removed promptly rather than waiting for a normal access-change cycle.
 
 ## How should temporary supervisory assignments be represented, if they exist?
 ### Decision:
-Temporary supervisory assignments should not automatically result in assignment to the permanent GG-Sales-Supervisors role.
-A temporary assignment should require a documented change request identifying the temporary responsibilities and the access
- required to perform them. Only the necessary Domain Local entitlement groups should be granted for the duration of the assignment.
- The temporary access should have a defined expiration or removal process.
+Temporary supervisory access should use a just-in-time, time-bound access model rather than permanent assignment
+to GG-Sales-Supervisors.
+
+The employee should receive only the elevated entitlement required for the temporary responsibility. Access should 
+require an approved request, have a defined activation period, and expire automatically when that period ends.
+
+Temporary supervisory access should not become permanent group membership unless the employee is formally promoted into the Supervisor role.
 ### Rationale:
-A temporary assignment may require only a subset of the permissions associated with the permanent Supervisor role. Granting the complete Supervisor 
-role could provide unnecessary access. Temporary access should therefore be scoped to the actual business requirement and should not become 
-permanent through administrative oversight.
+Temporary responsibilities do not justify permanent supervisory access.
+
+A just-in-time model limits the duration of elevated access, preserves least privilege, and reduces the risk that 
+temporary permissions remain assigned after the business need has ended.
+
+The long-term architecture should support:
+
+eligibility for temporary supervisory access;
+documented business justification;
+approval before activation;
+defined activation duration;
+automatic expiration;
+audit logging of activation and removal;
+verification that elevated access is no longer present after expiration.
+
+### Implementation Note:
+
+The exact technical JIT mechanism will be designed during the Privileged Access phase of the lab rather than 
+implemented directly as part of the initial Sales RBAC model.
 ### Design consideration:
 
 Direct membership in Domain Local entitlement groups creates an exception to the normal:
