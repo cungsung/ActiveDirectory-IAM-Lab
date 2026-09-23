@@ -70,7 +70,8 @@ required for the supervisor role. It is important to understand that in any othe
 be removed as soon as the user is taken out of their current group for example, "GG-Sales-Representative", and 
 added to the "GG-Sales-Supervisor" Global Group. Then, their new permissions are assigned. This way the deprovisioning
 is easier, and privilege creeps are reduced. 
- ** NOTE:** Please do not misunderstand, quarterly access reviews will still be conducted. The architecture is not there to
+
+ **NOTE:** Please do not misunderstand, quarterly access reviews will still be conducted. The architecture is not there to
  act as a compensating control for access reviews. 
 
 
