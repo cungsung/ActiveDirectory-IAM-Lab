@@ -165,9 +165,9 @@ The following conditions should remain true:
 7. A promotion from Representative to Supervisor must result in the Supervisor entitlement set.
 8. A demotion from Supervisor to Representative must remove supervisory management access.
 
-## Open Design Questions
+# Open Design Questions
 
-* What authority approves a Sales Supervisor promotion?
+## What authority approves a Sales Supervisor promotion?
 ### Decision:
  A Sales Supervisor promotion should be approved by HR or an existing Sales Supervisor/department leader.
 When an existing Supervisor is available, the Supervisor should be able to identify and approve Representatives who are ready for promotion.
@@ -180,7 +180,7 @@ responsibilities. IAM should enforce the approved organizational decision rather
  or leader of that department, there should be some documentation that proves there was formal
  agreement on a promotion or change in access. 
   
-* Should role changes require an approval record before access changes occur?
+## Should role changes require an approval record before access changes occur?
 ### Decision:
  Yes. All role changes should require documented approval before the corresponding access change is performed.
 The approval may come from the appropriate department Supervisor, department leader, or HR depending on the circumstances, 
@@ -189,7 +189,7 @@ but there should be a record demonstrating that the organization formally approv
  Role changes can modify an employee's level of authority. Requiring an approval record establishes accountability and provides
  evidence that access was granted because of a legitimate business decision.
 
-* How should a Supervisor demotion be handled?
+## How should a Supervisor demotion be handled?
 ### Decision:
  A Supervisor demotion should generate a documented change request and should be processed with expedited priority.
 The employee's supervisory role should be removed as soon as the demotion becomes effective. GG-Sales-Supervisors
@@ -200,7 +200,7 @@ The resulting access should be validated to ensure that DL-Salesforce-Management
  A demotion removes previously authorized supervisory responsibilities. The associated elevated access should therefore 
 be removed promptly rather than waiting for a normal access-change cycle.
 
-* How should temporary supervisory assignments be represented, if they exist?
+## How should temporary supervisory assignments be represented, if they exist?
 ### Decision:
 Temporary supervisory assignments should not automatically result in assignment to the permanent GG-Sales-Supervisors role.
 A temporary assignment should require a documented change request identifying the temporary responsibilities and the access
@@ -220,7 +220,7 @@ authorization model.
 
 If this exception is permitted, it must be explicitly governed, documented, time-limited, and auditable
 
-* How frequently should supervisory access be reviewed?
+## How frequently should supervisory access be reviewed?
 ### Decision:
 Supervisory access should be reviewed quarterly.
 The review should verify that the employee's current responsibilities continue to justify the access assigned
@@ -230,7 +230,7 @@ Supervisory access provides capabilities beyond standard Sales responsibilities.
 opportunity to identify access that is no longer justified by the employee's current duties.
 
   
-* What evidence should be retained when a role changes?
+## What evidence should be retained when a role changes?
 ### Decision
  An auditable record should be retained for each role assignment or role change.
 
