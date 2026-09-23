@@ -224,6 +224,9 @@ defined activation duration;
 automatic expiration;
 audit logging of activation and removal;
 verification that elevated access is no longer present after expiration.
+### Implementation Note:
+
+The exact technical JIT mechanism will be designed during the Privileged Access phase of the lab rather than implemented directly as part of the initial Sales RBAC model.
 
 ## How frequently should supervisory access be reviewed?
 ### Decision:
