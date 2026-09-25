@@ -624,6 +624,8 @@ The Disabled Users OU serves as an administrative location for disabled identiti
 
 The account must not be moved to the Disabled Users OU as a substitute for disabling the account.
 
+**Retention:** 90 days after the effective termination date.
+
 ## Deletion
 
 Disabling and deleting an identity are separate lifecycle actions.
@@ -640,6 +642,11 @@ Required Audit Evidence
 Data-Retention Requirements
 Legal/Hold Requirements
 ```
+### Deletion authority: designated IAM/IT administrator approval, with HR confirming that the employee's separation is final and no retention/legal requirement prevents deletion.
+
+### Deletion executor: IAM automation or administrator, after approval.
+
+### Audit evidence: employee ID, termination date, retention expiration date, approval, executor, deletion timestamp, and validation result.
 
 Until those requirements are defined, terminated identities should remain disabled rather than being automatically deleted.
 
