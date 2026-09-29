@@ -759,6 +759,57 @@ VPN Exception Rule:
 Remote and Hybrid employees receive VPN access according to the standard rule.
 On-Site employees do not receive VPN access by default.
 An approved, documented, time-bound exception may grant VPN access without changing the employee's authoritative work arrangement.
+
+
+## Role Resolution
+
+The lifecycle system does not grant authorization directly from raw HR attributes.
+
+HR attributes are evaluated against an approved role catalog.
+
+HR Record
+    ↓
+Department + Job Title + Employment Context
+    ↓
+Approved Role Mapping
+    ↓
+Business Role
+    ↓
+Role Entitlements
+    ↓
+Technical Group Membership
+
+Role mappings are explicitly defined and maintained as IAM configuration.
+
+For example:
+
+Sales + Sales Representative
+    → Sales Representative Role
+
+Sales + Sales Manager
+    → Sales Manager Role
+
+A matching role must resolve to exactly one approved permanent role unless the lifecycle model explicitly supports multiple approved roles.
+
+If no role mapping exists, the account may be created according to the approved provisioning policy, but authorization is not guessed or automatically assigned.
+
+If multiple role mappings conflict, authorization is not automatically selected. The lifecycle operation enters an exception state requiring human review.
+
+The role catalog is separate from the HR job-title catalog. A job title describes an employee's business position; an IAM role defines the access required to perform an approved set of responsibilities.
+
+
+## Idempotency
+
+Lifecycle operations should be safe to evaluate repeatedly.
+
+If the current identity state already matches the approved desired state, reprocessing the same lifecycle event should result in no unintended authorization changes.
+
+For example, running the same Joiner operation twice must not create a second identity or produce additional unintended group memberships.
+
+Likewise, processing the same Mover event repeatedly must not continually modify an already-correct role state.
+
+Idempotency allows lifecycle automation to recover from interrupted execution and supports safe retry behavior.
+
 ...
 ```
 
