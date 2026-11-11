@@ -33,9 +33,29 @@ I'm hoping that gives enough information for Okta to be able to differentiate be
 for the sake of the current naming convention of test users in my lab, I think that username, employee ID amongst the other
 role-related identifiers should suffice.
 
+
 ### What should happen in Okta when an AD test user is disabled?
 If an AD account is disabled, it should also be changed accordingly in Okta. If an account is moved outside the configured import scope, it 
 should be defined whether or not the account is to be deactivated, stopped being updated or retained.
 
 ### Should Okta be allowed to write changes back to AD?
 No, the integration will initially be kept as read only on the Okta end, and Active Directory will be my authoritative identity source. 
+
+
+## Governance and Service accounts
+
+### Service Accounts
+So after some thought and research, Okta has multiple services. Following best practice and least privilege, I believe the best choice is
+to have a service account for each responsibility in Okta. That being said, a new OU is to be created in the Accounts tree to house
+these service accounts.
+
+### Governance
+To ensure that these service accounts aren't created indefinitely, the plan is to have quarterly reviews of these accounts. These reviews
+are to be completed by an administrator and they are responsible for validating these things:
+* Continued business and operational need
+* Account ownership and a documented purpose
+* Group memberships and assigned permissions
+* Account activity and signs of unauthorized use
+* Credential storage and management controls
+* Required remediation and review documentation.
+The application or service owner remains responsible for confirming that the account is still required.
